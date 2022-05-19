@@ -13,22 +13,23 @@ app.use(express.urlencoded({ extended: false }))
 
 //ROUTES
 
-// index
+// Index
 app.get('/budgets', (req, res) => {
     res.render('index.ejs', { budgets })
 })
 
-// show
+// New
+app.get('/budgets/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+// Show
 app.get('/budgets/:index', (req, res) => {
     res.render('show.ejs', {
         budget: budgets[req.params.index]
     })
 })
 
-// new
-app.get('/budgets/new', (req, res) => {
-    res.render('new.ejs')
-})
 
 // create w/ POST
 app.post('/budgets', (req, res) => {
