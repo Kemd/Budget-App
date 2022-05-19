@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-    <link rel="stylesheet" href="./public/css">
+    <link rel="stylesheet" href="/public/style.css" />
     <title>Budgtr items</title>
 </head>
 <body>
@@ -14,25 +14,25 @@
 
         <!-- budgets.key giving an undefined errors -->
 
-        <h1><%= budget.name %></h1>
+        <h1><%= budget[i].name %></h1>
     
         <a href="/budgets"> <button>Back to Budgtr</button></a><br>
     
         <!-- showing each item in budgets  -->
         <h5> Date</h5>
-        <p><%= budget.date %></p>
+        <p><%= budget[i].date %></p><hr>
 
         <h5> Name</h5>
-        <p><%= budget.name %></p>
+        <p><%= budget[i].name %></p><hr>
 
         <h5> From</h5>
-        <p><%= budget.from %></p>
+        <p><%= budget[i].from %></p><hr>
 
         <h5> Amount</h5>
-        <p><%= budget.amount %></p>
+        <p><%= budget[i].amount %></p><hr>
 
         <h5> Tags</h5>
-        <p><%= budget.tags %></p>
+        <p><%= budget[i].tags %></p><hr>
 
     </div>
     

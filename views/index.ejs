@@ -20,14 +20,13 @@
         <h1> Budgtr</h1>
 
         <table>
-            
-                <% budgets.forEach(budget => { %>
-                
-                <!-- turn budget.name into a link with anchor tag or .link() Method -->
-                <tr><%= budget.date + ' ' + budget.name + ' ' + budget.amount %></tr>
-                <hr>
-
-                <% }) %>
+                <% for (let i = 0; i < budgets.length; i++) { %>
+                    <a href="/budgets/ <%= i %>">
+                        <!-- turn budget into a link with anchor tag -->
+                        <p><%= budgets[i].date + ' ' + budgets[i].name + ' ' + budgets[i].amount %></p>
+                        <hr>
+                    </a>
+                <% } %>
             <!-- Button  -->
             <a href="/budgets/new"> <button>Create new Budgtr</button></a>
         </table>

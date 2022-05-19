@@ -11,6 +11,9 @@ const port = 3000
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: false }))
 
+// https://stackoverflow.com/questions/18629327/adding-css-file-to-ejs
+app.use('/public', express.static('public'))
+
 //ROUTES
 
 // Index
