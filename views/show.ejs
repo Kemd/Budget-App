@@ -6,32 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-    <title>TITLE</title>
+    <link rel="stylesheet" href="./public/css">
+    <title>Budgtr items</title>
 </head>
 <body>
     <div class="container">
 
         <!-- budgets.key giving an undefined errors -->
 
-        <h1>Budget</h1>
+        <h1><%= budget.name %></h1>
     
-        <a href="/budgets"> <button>Back to Budgtr</button></a>
+        <a href="/budgets"> <button>Back to Budgtr</button></a><br>
     
         <!-- showing each item in budgets  -->
-        <h3> Date</h3>
+        <h5> Date</h5>
         <p><%= budget.date %></p>
 
-        <h3> Name</h3>
-        <p></p>
+        <h5> Name</h5>
+        <p><%= budget.name %></p>
 
-        <h3> From</h3>
-        <p></p>
+        <h5> From</h5>
+        <p><%= budget.from %></p>
 
-        <h3> Amount</h3>
-        <p></p>
+        <h5> Amount</h5>
+        <p><%= budget.amount %></p>
 
-        <h3> Tags</h3>
-        <p></p>
+        <h5> Tags</h5>
+        <p><%= budget.tags %></p>
 
     </div>
     

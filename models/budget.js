@@ -76,16 +76,3 @@ const budgets = [
 
 module.exports = budgets
 
-// change price color based on amount  low|high
-// invoke custom() in all ejs files
-function custom() {
-    budgets.forEach(item => {
-        if (item === budgets.amount) {
-            if (budgets.amount < 500) {
-                budgets.amount.backgoundColor = 'green'
-            } else {
-                budgets.amount.style.backgoundColor = 'red'
-            }
-        }
-    })
-}
