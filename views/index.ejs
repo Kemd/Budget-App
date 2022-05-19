@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- STYLING -->
 
-    <link rel="stylesheet" href="/normalize.css" />
-    <link rel="stylesheet" href="/skeleton.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <style>
     </style>
     <title>Budgtr</title>
@@ -22,17 +23,18 @@
         <table>
             <td>
                 <% budgets.forEach(budget => { %>
-                    <a href="/budgets/:index <%= budget %>"></a>
+                <!-- <a href="/budgets/:index <%= budget %>"></a> -->
 
-                        <!-- todo - turn budget.name to link  -->
-                        <tr><%= budget.date + ' ' + budget.name + ' ' + budget.amount %></tr><br><hr>
+                <!-- todo - turn budget.name to link  -->
+                <tr><%= budget.date + ' ' + budget.name + ' ' + budget.amount %></tr>
+                <hr>
 
                 <% }) %>
             </td>
         </table>
 
     </div>
-            <!-- Button  -->
+    <!-- Button  -->
     <a href="/budgets/new"> <button>Create new Budgtr</button></a>
 
 </body>
