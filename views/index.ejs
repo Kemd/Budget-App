@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLING -->
+
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+    <style>
+    </style>
+    <title>Budgtr</title>
+</head>
+
+<body>
+    <!-- Main page - works like index.html  -->
+    <div class="container">
+        <h1> Budgtr</h1>
+
+        <table>
+            <td>
+                <% budgets.forEach(budget => { %>
+                    <a href="/budgets/:index <%= budget %>"></a>
+
+                        <!-- todo - turn budget.name to link  -->
+                        <tr><%= budget.date + ' ' + budget.name + ' ' + budget.amount %></tr><br><hr>
+
+                <% }) %>
+            </td>
+        </table>
+
+    </div>
+            <!-- Button  -->
+    <a href="/budgets/new"> <button>Create new Budgtr</button></a>
+
+</body>
+
+</html>

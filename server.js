@@ -1,33 +1,40 @@
 // required dependencies
 const express = require('express')
-const res = require('express/lib/response')
-const budget = require('./models/budget')
+// const res = require('express/lib/response')
+const budgets = require('./models/budget')
 
 // init express
 const app = express()
 
 const port = 3000
 
+// MIDDLEWARE
+app.use(express.urlencoded({ extended: false }))
+
 //ROUTES
 
 // index
 app.get('/budgets', (req, res) => {
-    res.send('working')
+    res.render('index.ejs', { budgets })
 })
 
 // show
 app.get('/budgets/:index', (req, res) => {
-    res.send('Are you working?')
+    res.render('show.ejs', {
+        budget: budgets[req.params.index]
+    })
 })
 
 // new
 app.get('/budgets/new', (req, res) => {
-    res.send('new page')
+    res.render('new.ejs')
 })
 
 // create w/ POST
 app.post('/budgets', (req, res) => {
-    res.send('good post?')
+    budgets.push(req.body)
+    console.log(req.body)
+    res.redirect('budgets')
 })
 
 // ROUTES
